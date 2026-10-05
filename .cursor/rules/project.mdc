@@ -1,3 +1,31 @@
 ---
-alwaysApply: true
+description: Project stack and coding conventions for the Flyrank Ai
+alwaysApply: false
 ---
+
+
+# Project: Flyrank Ai
+
+## Stack
+- Frontend: Next.js (App Router) + TypeScript + Tailwind CSS
+- Backend: Python 3.11+ with FastAPI
+- Database: PostgreSQL (planned)
+- AI: LLM API calls made from the backend only (never expose API keys to the browser)
+
+## Folder structure
+- `frontend/` – Next.js app
+- `backend/` – FastAPI app
+- `docs/` – project notes and decisions
+
+## Conventions
+- Commits follow Conventional Commits: feat, fix, docs, chore, refactor, test, style
+- TypeScript: strict mode, no `any`, functional React components with hooks
+- Python: type hints on all functions, follow PEP 8, use Pydantic models for request/response
+- Name files and folders in kebab-case (frontend) and snake_case (backend)
+- Secrets live in `.env` files and are never committed
+- Keep functions small; add a short comment explaining *why*, not *what*
+
+## FLyrank Ai
+- Explain changes in simple terms before applying them
+- Prefer small, focused edits over large rewrites
+- Ask before adding new dependencies
