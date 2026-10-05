@@ -29,3 +29,18 @@ alwaysApply: false
 - Explain changes in simple terms before applying them
 - Prefer small, focused edits over large rewrites
 - Ask before adding new dependencies
+## Rules learned from the prompt drill
+- Feature specs live in `docs/<feature>-spec.md`. Read the spec and show a
+  plan (files → steps → test cases) before writing any code.
+- Validation lives in pure functions in `frontend/src/lib/validate-*.ts`
+  with Vitest tests. Always trim text input before validating or saving;
+  never rely on the HTML `required` attribute alone.
+- Never use `as` casts on data from localStorage, JSON or APIs. Check the
+  shape at runtime first.
+- Form inputs need `<label htmlFor>`, `aria-invalid` and
+  `aria-describedby`; success/status messages need `role="status"`.
+- Only touch files the task names. Never edit `frontend/src/app/page.tsx`
+  unless asked.
+- After any change in `/frontend`, run `npm test`, `npm run lint`,
+  `npx tsc --noEmit` and `npm run build`, and paste the raw output, not a
+  summary.
