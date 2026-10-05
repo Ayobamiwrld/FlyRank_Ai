@@ -1,7 +1,9 @@
 Workflow Drill: Vague vs Precise Prompting
 The feature
-A Settings form for my AI Productivity Assistant, built twice from the same main commit on two branches.
-
+A Settings form for my Flyrank Ai capstone, built twice from the same main commit on two branches.
+git add WORKFLOW.md .cursor/rules/project.mdc
+git commit -m "docs: use consistent project name"
+git push
 Round 1 – Vague (feat/settings-vague)
 Tool: Cursor Agent. Prompt: "make a settings page with a form". I accepted everything. It created a single 123-line src/app/settings/settings-form.tsx, changed 25 lines of src/app/page.tsx without being asked, and shipped zero tests. The build passed.
 
